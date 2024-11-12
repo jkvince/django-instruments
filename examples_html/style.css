@@ -1,0 +1,52 @@
+body {
+    background-color: #0d1239;
+    color: #ff90e5;
+    font-family: 'Deja Vu Sans';
+}
+
+.logo {
+    margin: auto;
+    display: block;
+    width: 150px;
+}
+
+/*
+-------NAV-------
+*/
+
+nav ul {
+    display: flex;
+    justify-content: center;
+}
+
+nav ul a {
+    color: #ff90e5;
+    list-style-type: none;
+    padding-left: 2%;
+    padding-right: 2%;
+    text-decoration: none;
+}
+
+nav ul a:hover {
+    border: solid #5b3b88;
+}
+
+nav ul a li{
+    font-size: 1.5em;
+}
+
+article {
+    background-color: #01071d;
+    width: 80%;
+    margin: auto;
+}
+
+
+/*
+-------PRODUCT LIST-------
+*/
+
+.product_list {
+    display: flex;
+    flex-wrap: wrap;
+}
