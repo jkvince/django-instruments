@@ -1,14 +1,20 @@
+@font-face {
+    font-family: 'VP Pixel Simplified';
+    src: url('VPPixel-Simplified.otf');
+}
+
 body {
     background-color: #0d1239;
     color: #ff90e5;
-    font-family: 'Deja Vu Sans';
+    font-family: 'VP Pixel Simplified';
 }
 
-.logo {
-    margin: auto;
-    display: block;
-    width: 150px;
+
+.wirebox {
+    border: solid #5b3b88 1px;
 }
+
+
 
 /*
 -------NAV-------
@@ -17,6 +23,13 @@ body {
 nav ul {
     display: flex;
     justify-content: center;
+    width: 90%;
+    margin: auto;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    font-size: 100%;
+
+
 }
 
 nav ul a {
@@ -25,28 +38,52 @@ nav ul a {
     padding-left: 2%;
     padding-right: 2%;
     text-decoration: none;
+    border: 1px solid transparent;
 }
 
 nav ul a:hover {
-    border: solid #5b3b88;
+    border: solid #5b3b88 1px;
 }
 
 nav ul a li{
     font-size: 1.5em;
 }
 
-article {
-    background-color: #01071d;
-    width: 80%;
-    margin: auto;
+
+/*
+-------MAIN BODY-------
+*/
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 
+.post-list {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin: auto;
+    margin-top: 50px;
+}
+.post-list div {
+    border: solid #5b3b88 1px;
+    flex-grow: 1;
+    height: 100%;
+}
+
+
+
 /*
--------PRODUCT LIST-------
+-------SMALL MODE-------
 */
 
-.product_list {
-    display: flex;
-    flex-wrap: wrap;
+@media (max-width: 1000px) {
+    
+    body {
+        background-color: green;
+    }
+
+
 }

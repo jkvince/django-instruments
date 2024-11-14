@@ -11,3 +11,6 @@ This is a CA project for Software Development. The task is to built a e-commerce
 
 # Colors
 (#01071d), (#0d1239), (#29225e), (#5b3b88), (#a85eb5), (#ff90e5)
+
+# Fonts
+- **VP Pixel and VP Pixel Pro Outline** by VP Type (1001 fonts)
