@@ -21,3 +21,20 @@ The colours are generated within the OKLAB perceptual color space following an a
 
 # Fonts
 - **VP Pixel and VP Pixel Pro Outline** by VP Type (1001 fonts)
+
+
+# Work log - Collin Macauley (x00213729)
+No Date tracked
+- Accounts setup
+-
+Changelog - 23/11/2024
+- project/urls.py updated for accounts
+- product models added
+- sign up pages raw
+- shop app
+- all urls updated
+- shop app models, ulrs, views
+
+To Do list
+- migrate shop app
+- add other models to shop 
