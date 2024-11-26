@@ -1,6 +1,6 @@
 const parallaxContainer = document.querySelector('body');
 
-parallaxContainer.style.backgroundImage = 'url("../static/images/logo.png")';
+parallaxContainer.style.backgroundImage = 'url("../static/images/background.png")';
 
 function parallaxEffect() {
   const scrollPosition = window.scrollY;
