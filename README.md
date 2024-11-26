@@ -37,4 +37,11 @@ Changelog - 23/11/2024
 
 To Do list
 - migrate shop app
-- add other models to shop 
+- add other models to shop
+
+
+Changelog - 23/11/2024
+- fixed image link
+- added fixtures and json to shop
+
+
