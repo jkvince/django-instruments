@@ -1,9 +1,10 @@
 from django.views.generic.edit import CreateView
+from django.views.generic import UpdateView, DetailView
 from django.contrib.auth import login
 from django.contrib.auth.models import Group
 from django.urls import reverse_lazy
 from .forms import CustomUserCreationForm
-from .models import CustomUser
+from .models import CustomUser, Profile
 
 class SignUpView(CreateView):
     model = CustomUser
@@ -26,3 +27,13 @@ class SignUpView(CreateView):
     # Log the user in after signup
         login(self.request, self.object)
         return response # Redirect to success URL
+    
+
+class ProfileEditView(UpdateView):
+    model = Profile
+    template_name = 'registration/edit_profile.html'
+
+
+class ProfilePageView(DetailView):
+    model = Profile
+    template_name = 'registration/user_profile.html'

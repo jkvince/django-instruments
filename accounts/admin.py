@@ -1,5 +1,15 @@
 from django.contrib import admin
-from .models import CustomUser
+from django.contrib.auth.admin import UserAdmin
+from .forms import CustomUserCreationForm, CustomUserChangeForm
+from .models import CustomUser, Profile
+
 
 # Register your models here.
-admin.site.register(CustomUser)
+class CustomUserAdmin(UserAdmin):
+    add_form = CustomUserCreationForm
+    form = CustomUserChangeForm
+    model = CustomUser
+    list_display = ['email', 'username', 'age', 'is_staff',]
+
+admin.site.register(CustomUser, CustomUserAdmin)
+admin.site.register(Profile)

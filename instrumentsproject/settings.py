@@ -140,5 +140,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Custom User
 AUTH_USER_MODEL = "accounts.CustomUser"
 
+LOGIN_REDIRECT_URL = 'shop:all_products'
+LOGOUT_REDIRECT_URL = 'shop:all_products'
+
 CRISPY_ALLOWED_TEMPLATE_PACKS = 'bootstrap5'
 CRISPY_TEMPLATE_PACK = 'bootstrap5'

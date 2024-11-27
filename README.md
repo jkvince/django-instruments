@@ -40,8 +40,21 @@ To Do list
 - add other models to shop
 
 
-Changelog - 23/11/2024
+Changelog - 27/11/2024
 - fixed image link
 - added fixtures and json to shop
+- added fixtures and json to accounts
+- updated accounts to add managers and customers
+- Wiped all migrations and remade
+- made user profiles
 
 
+
+# Managers: 
+    Collin
+    Username - Manager_Collin
+    Password - Management123
+
+    Vin
+    Username - Manager_Vin
+    Password - Management123
