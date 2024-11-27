@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'VP Pixel Simplified';
-    src: url('VPPixel-Simplified.otf');
+    src: url("/static/fonts/VPPixel-Simplified.otf");
 }
 
 body {
