@@ -3,40 +3,20 @@
         "model": "accounts.customuser",
         "pk": 1,
         "fields": {
-            "password": "pbkdf2_sha256$870000$VAVwPIynuFumLsmyeWDhUc$WfiL7X89DmcoP5HN/51GQr9qicl0RsMdSRzwmAtKdqY=",
-            "last_login": "2024-11-23T12:48:56.437Z",
+            "password": "pbkdf2_sha256$870000$82UUEWQpYj1Ejz7ZldV9Ak$9+okrX6qMqMEzfhN/iFlsReBzyYXSB64AzkD5SITTwk=",
+            "last_login": "2024-11-27T14:57:08.317Z",
             "is_superuser": true,
-            "username": "collin",
+            "username": "Collin",
             "first_name": "",
             "last_name": "",
-            "email": "x00213729@mytudublin.ie",
+            "email": "collin@gmail.com",
             "is_staff": true,
             "is_active": true,
-            "date_joined": "2024-11-17T20:21:28Z",
+            "date_joined": "2024-11-27T14:56:45.675Z",
             "age": null,
             "groups": [],
             "user_permissions": []
         }
-    },
-    {
-        "model": "accounts.customuser",
-        "pk": 2,
-        "fields": {
-            "password": "Management123",
-            "last_login": null,
-            "is_superuser": true,
-            "username": "Manager_Collin",
-            "first_name": "Collin",
-            "last_name": "Adeyinka-Macauley",
-            "email": "X00213729@mytudublin.ie",
-            "is_staff": true,
-            "is_active": true,
-            "date_joined": "2024-11-27T12:53:40Z",
-            "age": 20,
-            "groups": [
-                2
-            ],
-            "user_permissions": []
-        }
     }
 ]
+
