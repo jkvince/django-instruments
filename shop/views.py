@@ -1,13 +1,18 @@
 from django.shortcuts import render, get_object_or_404
 from .models import Category, Product
 from django.core.paginator import Paginator, EmptyPage, InvalidPage
-from django.views.generic import DetailView
+from django.views.generic import TemplateView
 
 
-class MainPage(DetailView):
+class MainPageView(TemplateView):
     model = Product
     template_name = "mainpage.html"
     context_object_name = "main_page"
+
+
+class AboutPageView(TemplateView):
+    template_name = 'about.html'
+    context_object_name = "about"
 
 
 def prod_list(request, category_id=None):

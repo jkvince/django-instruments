@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block metadescription %}
+    {{ product.description|truncatewords:155 }}
+{% endblock %}
+{% block title %}
+    About - WaveNetwork
+{% endblock %}
+{% block content %}
+
+
+<article class="post-list">
+
+    <div>
+        <h1>Made By</h1>
+        <p>The project was made by Vincenzo Joyce and Collin Macauley using the Django Framework.</p>
+        <p>You can see the whole project on <a href="https://github.com/jkvince/django-instruments">Github</a>.</p>
+    </div>
+    
+
+</article>
+
+{% endblock %}

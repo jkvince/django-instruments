@@ -18,6 +18,8 @@ body {
     margin: auto;
     display: block;
     width: 250px;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 /*
@@ -86,6 +88,18 @@ nav ul a li {
 
 
 
+.create-form {
+    border: solid #5b3b88 1px;
+    height: 100%;
+    margin-bottom: 2em;
+    font-size: x-large;
+
+    width: 65%;
+    margin: auto;
+    margin-top: 50px;
+    padding: 2%;
+}
+
 /*
 -------SMALL MODE-------
 */
@@ -131,6 +145,11 @@ nav ul a li {
         width: 100%;
         margin: auto;
         margin-top: 50px;
+    }
+
+    .create-form {
+        width: 100%;
+
     }
 
 }
