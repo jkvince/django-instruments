@@ -37,22 +37,18 @@
     </div>
     <br>
     <div>
-        <h1 class="text-center my_title" >Our Products Collection</h1>
-        <p class="text-justify">Finding the perfect cushion for your room can instantly add to the levels of comfort and 
-            sense of style throughout your home. They can transform the blandest of decors instantly 
-            by adding colour, softness and an air of cosiness. As well as being comfy and looking great 
-            our range of cushions will certainly embolden your décor with personalised charm.</p>
+
     </div>
     {% endif %}
     <div class="container">
         <div class="row mx-auto">
             {% for product in prods %}
-                <div class="my_bottom_margin col-9 col-lg-4 col-sm-12 col-md-4">
+                <div class="my_bottom_margin col-9 col-lg-4 col-sm-12 col-md-4 mb-5">
                     <div class="card text-center" style="min-width:18rem;">
                         <a class="img" href="{{ product.get_absolute_url }}">
                             <img class="card-img-top my_image" src="{{ product.image.url }}" alt="{{ product.name }}">
                         </a>
-                        <div class="card-body bg-dark text-white">
+                        <div class="card-body bg-dark text-white ">
                             <h4>{{product.name}}</h4>
                             <p>€{{product.price}}</p>
                         </div>
