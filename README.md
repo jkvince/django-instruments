@@ -48,6 +48,9 @@ Changelog - 27/11/2024
  - Wiped all migrations and remade
  - made user profiles
 
+image should be jpeg
+Set image size to 250 x 250 px for products
+Use google extension save image as
 
 
 # Managers: 
