@@ -5,7 +5,7 @@
 {% block content %}
 
 
-<h1>All Posts</h1>
+<h1 class="wirebox" style="margin-top: 30px; text-align: center;">All Posts</h1>
 
 <div class="post">
     <article>
@@ -15,7 +15,7 @@
                 <h2><a href="{% url 'post_detail' post.pk %}">{{ post.title }}</a></h2>
             </div>
         {% endfor %}
-        
+
     </article>
 </div>
 
