@@ -1,0 +1,155 @@
+[
+    {
+        "model": "shop.category",
+        "pk": "4edd261e-5ee3-4efa-baa3-b68d8d943a66",
+        "fields": {
+            "name": "Drums",
+            "slug": "Drums",
+            "description": "Drums category",
+            "image": "category/Drum_banner.jpg"
+        }
+    },
+    {
+        "model": "shop.category",
+        "pk": "ce5663db-9f04-4d28-af0a-106e7b6f8b9b",
+        "fields": {
+            "name": "Guitars",
+            "slug": "Guitars",
+            "description": "Test",
+            "image": "category/guitar_banner.webp"
+        }
+    },
+    {
+        "model": "shop.warehouse",
+        "pk": "893271e6-af29-4714-9cfa-b4d125ee0276",
+        "fields": {
+            "name": "Guitars",
+            "location": "Germany",
+            "contact_email": "test@gmail.com",
+            "contact_phone": "10100100001"
+        }
+    },
+    {
+        "model": "shop.warehouse",
+        "pk": "c895474a-4e27-4f1b-a783-d45295240450",
+        "fields": {
+            "name": "Drums",
+            "location": "Dublin",
+            "contact_email": "test@gmail.com",
+            "contact_phone": "10090000909"
+        }
+    },
+    {
+        "model": "shop.brand",
+        "pk": "1eeb9c85-8edf-40cf-9ec5-481888b6c404",
+        "fields": {
+            "name": "Ludwig",
+            "description": "Drums",
+            "image": "brands/Ludwig_logo.jpg"
+        }
+    },
+    {
+        "model": "shop.brand",
+        "pk": "6d5d1ba4-78c1-4b4f-a2d3-bf040ce12fd4",
+        "fields": {
+            "name": "Ibanez",
+            "description": "Test",
+            "image": "brands/Ibanez_TOD10.jpg"
+        }
+    },
+    {
+        "model": "shop.product",
+        "pk": "0995c760-2c92-42a3-9b66-1e83c26255fd",
+        "fields": {
+            "name": "Ibanez TOD10N",
+            "slug": "Ibanez-TOD10N-Black",
+            "description": "Nylon Guitar",
+            "category": "ce5663db-9f04-4d28-af0a-106e7b6f8b9b",
+            "brand": "6d5d1ba4-78c1-4b4f-a2d3-bf040ce12fd4",
+            "price": "850.00",
+            "discount_price": null,
+            "image": "products/guitars/Ibanez_TOD10N.jpg",
+            "stock": 6,
+            "warehouse": "893271e6-af29-4714-9cfa-b4d125ee0276",
+            "available": true,
+            "created": "2024-11-29T15:10:49.153Z",
+            "updated": "2024-11-29T15:12:28.718Z"
+        }
+    },
+    {
+        "model": "shop.product",
+        "pk": "2c5d7a3e-6d48-4c2b-8f41-dcca9a155b88",
+        "fields": {
+            "name": "Ibanez KRYS10",
+            "slug": "Ibanez-KRYS10-Silver-Electric",
+            "description": "Signature guitar",
+            "category": "ce5663db-9f04-4d28-af0a-106e7b6f8b9b",
+            "brand": "6d5d1ba4-78c1-4b4f-a2d3-bf040ce12fd4",
+            "price": "989.00",
+            "discount_price": null,
+            "image": "products/guitars/Ibanez_KRYS10.jpg",
+            "stock": 5,
+            "warehouse": "893271e6-af29-4714-9cfa-b4d125ee0276",
+            "available": true,
+            "created": "2024-11-29T16:30:52.610Z",
+            "updated": "2024-11-29T16:31:16.629Z"
+        }
+    },
+    {
+        "model": "shop.product",
+        "pk": "82d5470b-9e3e-42ed-aba4-d95637bf6bdb",
+        "fields": {
+            "name": "Ibanez TOD10",
+            "slug": "Ibanez-TOD10-Silver-Electric",
+            "description": "test",
+            "category": "ce5663db-9f04-4d28-af0a-106e7b6f8b9b",
+            "brand": "6d5d1ba4-78c1-4b4f-a2d3-bf040ce12fd4",
+            "price": "1799.00",
+            "discount_price": null,
+            "image": "products/guitars/Ibanez_TOD10_c3DzsZl.jpg",
+            "stock": 7,
+            "warehouse": "893271e6-af29-4714-9cfa-b4d125ee0276",
+            "available": true,
+            "created": "2024-11-29T14:16:41.452Z",
+            "updated": "2024-11-29T15:18:36.632Z"
+        }
+    },
+    {
+        "model": "shop.product",
+        "pk": "9c3fb4b9-ea15-4a80-bfcd-d1a819fccb30",
+        "fields": {
+            "name": "Ibanez Gio GRX120SP-VRD",
+            "slug": "Ibanez-Gio-GRX120SP-VRD",
+            "description": "",
+            "category": "ce5663db-9f04-4d28-af0a-106e7b6f8b9b",
+            "brand": "6d5d1ba4-78c1-4b4f-a2d3-bf040ce12fd4",
+            "price": "565.00",
+            "discount_price": null,
+            "image": "products/guitars/ibanez-gio-grx120sp-vrd.jpg",
+            "stock": 10,
+            "warehouse": "893271e6-af29-4714-9cfa-b4d125ee0276",
+            "available": true,
+            "created": "2024-11-29T17:18:28.135Z",
+            "updated": "2024-11-29T17:18:28.135Z"
+        }
+    },
+    {
+        "model": "shop.product",
+        "pk": "ea8c6cb8-97e7-4df8-af48-962c7a96e28b",
+        "fields": {
+            "name": "Ludwig Continental Club 20\" Blue Sparkle Shell Set",
+            "slug": "Ludwig-Continental-Club-20-Blue",
+            "description": "Ludwig Continental Club 20\" Blue Sparkle Shell Set",
+            "category": "4edd261e-5ee3-4efa-baa3-b68d8d943a66",
+            "brand": "1eeb9c85-8edf-40cf-9ec5-481888b6c404",
+            "price": "680.00",
+            "discount_price": null,
+            "image": "products/drums/ludwig-continental-club-20-blue.jpg",
+            "stock": 5,
+            "warehouse": "c895474a-4e27-4f1b-a783-d45295240450",
+            "available": true,
+            "created": "2024-11-29T16:40:51.572Z",
+            "updated": "2024-11-29T16:40:51.572Z"
+        }
+    }
+]

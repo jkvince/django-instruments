@@ -3,20 +3,19 @@
         "model": "accounts.customuser",
         "pk": 1,
         "fields": {
-            "password": "pbkdf2_sha256$870000$82UUEWQpYj1Ejz7ZldV9Ak$9+okrX6qMqMEzfhN/iFlsReBzyYXSB64AzkD5SITTwk=",
-            "last_login": "2024-11-27T14:57:08.317Z",
+            "password": "pbkdf2_sha256$870000$EFrvxoTg1Q9aeGrEkoN2Co$T+Qc42UtwbRbSVh3a5dCKiUCZzG5TG2nso0/bbXyxl4=",
+            "last_login": "2024-11-29T14:13:45.478Z",
             "is_superuser": true,
-            "username": "Collin",
+            "username": "collin",
             "first_name": "",
             "last_name": "",
             "email": "collin@gmail.com",
             "is_staff": true,
             "is_active": true,
-            "date_joined": "2024-11-27T14:56:45.675Z",
+            "date_joined": "2024-11-29T14:13:22.754Z",
             "age": null,
             "groups": [],
             "user_permissions": []
         }
     }
 ]
-
