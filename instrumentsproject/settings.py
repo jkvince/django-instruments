@@ -43,10 +43,10 @@ INSTALLED_APPS = [
     'shop',
     'messageboard',
     # 'cart', not functional yet
-    
+    'search_app',
     #3rd Party
     'crispy_forms',
-    'crispy_bootstrap4',
+    'crispy_bootstrap5',
 ]
 
 MIDDLEWARE = [
@@ -147,5 +147,5 @@ AUTH_USER_MODEL = "accounts.CustomUser"
 LOGIN_REDIRECT_URL = 'shop:all_products'
 LOGOUT_REDIRECT_URL = 'shop:all_products'
 
-CRISPY_ALLOWED_TEMPLATE_PACKS = 'bootstrap4'
-CRISPY_TEMPLATE_PACK = 'bootstrap4'
+CRISPY_ALLOWED_TEMPLATE_PACKS = 'bootstrap5'
+CRISPY_TEMPLATE_PACK = 'bootstrap5'
