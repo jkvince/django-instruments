@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %} Post Detail Page {% endblock title %}
+
+{% block content %}
+<div class="post">
+    <article class="post-entry">
+        <h1>{{ post.title }}</h1>
+        <p>{{ post.text | linebreaks }}</p>
+    </article>
+    <section>
+        <p><a href="{% url 'messageboard:post_edit' post.pk %}">Edit Post</a></p>
+        <p><a href="{% url 'messageboard:post_delete' post.pk %}">Delete Post</a></p>
+    </section>
+
+</div>
+
+{% endblock content %}

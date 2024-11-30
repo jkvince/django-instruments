@@ -114,6 +114,30 @@ nav ul a li {
     padding: 2%;
 }
 
+
+/*
+-------MESSAGE BOARD-------
+*/
+
+.post article {
+    width: 50%;
+    margin: auto;
+    margin-top: 50px;
+    border: solid #5b3b88 1px;
+}
+
+.post article h1 {
+    text-align: center;
+}
+
+.post section {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+
+
 /*
 -------SMALL MODE-------
 */
