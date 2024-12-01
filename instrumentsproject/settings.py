@@ -42,8 +42,10 @@ INSTALLED_APPS = [
     'accounts',
     'shop',
     'messageboard',
-    # 'cart', not functional yet
     'search_app',
+    'cart',
+    'order',
+    'vouchers',
     #3rd Party
     'crispy_forms',
     'crispy_bootstrap5',
@@ -57,6 +59,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'middleware.no_cache.NoCacheMiddleware',
 ]
 
 ROOT_URLCONF = 'instrumentsproject.urls'
@@ -149,3 +152,6 @@ LOGOUT_REDIRECT_URL = 'shop:all_products'
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = 'bootstrap5'
 CRISPY_TEMPLATE_PACK = 'bootstrap5'
+
+STRIPE_SECRET_KEY = 'sk_test_51QKiy0COXXcQOjuHkSfYuHulCTzBWKevrgyV293B9L2bjpKzLNgZ49JryBvNAabwLqXvO5dRvowJRqbivwPpmKKQ008qq75EAY'
+STRIPE_PUBLISHABLE_KEY = 'pk_test_51QKiy0COXXcQOjuH1WYbNxygDNR7u0nkw5Z5NFAOlzw9wAg3FWqJaxtViGFH2D3HAX6qZhu7C9hY6pUZ79PYo8Am00NXgJQGfQ'

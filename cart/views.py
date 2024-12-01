@@ -13,27 +13,21 @@ from decimal import Decimal
 
 
 def _cart_id(request):
-    cart = request.session.session_key
-    if not cart:
-        cart = request.session.create()
-    return cart
+    cart_id = request.session.session_key
+    if not cart_id:
+        request.session.create()  # Create the session
+        cart_id = request.session.session_key  # Retrieve the newly created session key
+    return cart_id
 
 
-def add_cart(request, product_id):
-    product = Product.objects.get(id=product_id)
-    try:
-        cart = Cart.objects.get(cart_id=_cart_id(request))
-    except Cart.DoesNotExist:
-        cart = Cart.objects.create(cart_id=_cart_id(request))
-        cart.save()
-
-    try:
-        cart_item = CartItem.objects.get(product=product, cart=cart)
-        if cart_item.quantity < cart_item.product.stock:
-            cart_item.quantity += 1
-        cart_item.save()
-    except CartItem.DoesNotExist:
-        CartItem.objects.create(product=product, quantity=1, cart=cart)
+def add_cart(request, product_slug):
+    product = get_object_or_404(Product, slug=product_slug)
+    cart, created = Cart.objects.get_or_create(cart_id=_cart_id(request))
+    
+    cart_item, created = CartItem.objects.get_or_create(product=product, cart=cart)
+    if not created and cart_item.quantity < cart_item.product.stock:
+        cart_item.quantity += 1
+    cart_item.save()
 
     return redirect('cart:cart_detail')
 
@@ -48,7 +42,7 @@ def cart_detail(request, total=0, counter=0, cart_items=None):
         cart_items = CartItem.objects.filter(cart=cart, active=True)
 
         for cart_item in cart_items:
-            total += (cart_item.product.price * cart_item.quantity)
+            total += cart_item.product.price * cart_item.quantity
             counter += cart_item.quantity
     except ObjectDoesNotExist:
         pass
@@ -62,7 +56,7 @@ def cart_detail(request, total=0, counter=0, cart_items=None):
         voucher_id = request.session.get('voucher_id')
         voucher = Voucher.objects.get(id=voucher_id)
         if voucher:
-            discount = (total * (voucher.discount / Decimal('100')))
+            discount = total * (voucher.discount / Decimal('100'))
             new_total = total - discount
             stripe_total = int(new_total * 100)
     except ObjectDoesNotExist:
@@ -102,9 +96,9 @@ def cart_detail(request, total=0, counter=0, cart_items=None):
     })
 
 
-def cart_remove(request, product_id):
+def cart_remove(request, product_slug):
     cart = Cart.objects.get(cart_id=_cart_id(request))
-    product = get_object_or_404(Product, id=product_id)
+    product = get_object_or_404(Product, slug=product_slug)
     cart_item = CartItem.objects.get(product=product, cart=cart)
 
     if cart_item.quantity > 1:
@@ -116,9 +110,9 @@ def cart_remove(request, product_id):
     return redirect('cart:cart_detail')
 
 
-def full_remove(request, product_id):
+def full_remove(request, product_slug):
     cart = Cart.objects.get(cart_id=_cart_id(request))
-    product = get_object_or_404(Product, id=product_id)
+    product = get_object_or_404(Product, slug=product_slug)
     cart_item = CartItem.objects.get(product=product, cart=cart)
     cart_item.delete()
     return redirect('cart:cart_detail')
@@ -173,7 +167,7 @@ def create_order(request):
                 price=item.product.price,
                 order=order_details
             )
-            product = Product.objects.get(id=item.product.id)
+            product = Product.objects.get(slug=item.product.slug)
             product.stock -= item.quantity
             product.save()
             oi.price *= oi.quantity
