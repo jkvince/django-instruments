@@ -6,11 +6,22 @@
     <article class="post-entry">
         <h1>{{ post.title }}</h1>
         <p>{{ post.text | linebreaks }}</p>
+
+        {% if post.author.pk == request.user.pk %}
+            <section>
+                <p><a href="{% url 'messageboard:post_edit' post.pk %}">Edit Post</a></p>
+                <p><a href="{% url 'messageboard:post_delete' post.pk %}">Delete Post</a></p>
+            </section>
+        {% endif %}
     </article>
-    <section>
-        <p><a href="{% url 'messageboard:post_edit' post.pk %}">Edit Post</a></p>
-        <p><a href="{% url 'messageboard:post_delete' post.pk %}">Delete Post</a></p>
-    </section>
+    
+    {% for comment in post.comment.set_all %}
+        <article class="post-entry">
+            <h1>{{ comment.author }}</h1>
+            <p>{{ comment }}</p>
+        </article>
+    {% endfor %}
+
 
 </div>
 

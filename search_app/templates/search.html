@@ -7,14 +7,16 @@ Find your Perfect instrument.
 Search - Wave Network
 {% endblock %}
 {% block content %}
+
+{% include 'search_bar.html' %}
+
 <div>
     <p class="text-center my_search_text">You have searched for: <b>"{{ query }}"</b></p>
 </div>
 <div class="container">
     <div class="row mx-auto">
         {% for product in product_list %}
-        <div class="my_bottom_margin col-9 col-sm-12 col-md-4 col-md-
-12 col-lg-4">
+        <div class="my_bottom_margin col-9 col-sm-12 col-md-4 col-md-12 col-lg-4">
             <div class="card text-center" style="min-width: 18rem;">
                 <a href="{% url 'shop:product_detail' product.category.slug product.slug %}"><img class="card-img-top my_image" src="{{product.image.url}}"
                         alt="{{product.name}}"></a>

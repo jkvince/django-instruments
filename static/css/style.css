@@ -40,6 +40,11 @@ body {
 -------NAV-------
 */
 
+nav {
+    margin-bottom: 1em;
+}
+
+
 nav ul {
     display: flex;
     justify-content: center;
