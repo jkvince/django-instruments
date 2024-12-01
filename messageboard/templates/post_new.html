@@ -3,14 +3,23 @@
 
 {% block content %}
 <div class="post">
-    <article>
-        <h1>New Post</h1>
-        <form action="" method="POST">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <input type="submit" value="Save">
-        </form>
-    </article>
+    {% if user.is_authenticated %}
+
+            <article>
+                <h1>New Post</h1>
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <input type="submit" value="Save">
+                </form>
+            </article>
+    {% else %}
+        <article>
+            <h1>You are not logged in.</h1>
+            <h2 style="margin: auto; width: min-content;"><a href="{% url 'accounts:login' %}">Login</a></h2>
+        </article>
+    {% endif %}
 </div>
+
 
 {% endblock content %}

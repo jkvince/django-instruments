@@ -36,7 +36,7 @@ class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
 class PostCreateView(CreateView, LoginRequiredMixin):
     model = Post
     template_name = 'post_new.html'
-    fields = ['title', 'author', 'text']
+    fields = ['title', 'text']
 
     def form_valid(self, form):
         form.instance.author = self.request.user

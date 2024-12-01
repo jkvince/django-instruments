@@ -12,28 +12,44 @@
 
 
 {% block content %}
-<div class="create-form">
-  {% if not form.is_valid %}
-  <div class="mx-auto">
-    <h1 class="my_title text-center">Create a new account</h1>
-    <div class="col-9 col-sm-9 col-md-6 col-lg-5 mx-auto bg-light text-center"
-      style="width: 75%;">
-      <p>Enter the following information to create a new account.</p>
-      <form method="post">
-        <p>{{ form | crispy }}</p>
-        {% csrf_token %}
-        <button type="submit" class="btn btn-secondary">
-          Register Account
-        </button>
-        <p>Already have an account?</p>
-        <a href="{% url 'accounts:login' %}">Login</a>
-      </form>
+
+{% if not user.is_authenticated %}
+
+    <div class="create-form">
+      {% if not form.is_valid %}
+      <div class="mx-auto">
+        <h1 class="my_title text-center">Create a new account</h1>
+        <div class="col-9 col-sm-9 col-md-6 col-lg-5 mx-auto bg-light text-center"
+          style="width: 75%;">
+          <p>Enter the following information to create a new account.</p>
+          <form method="post">
+            <p>{{ form | crispy }}</p>
+            {% csrf_token %}
+            <button type="submit" class="btn btn-secondary">
+              Register Account
+            </button>
+            <p>Already have an account?</p>
+            <a href="{% url 'accounts:login' %}">Login</a>
+          </form>
+        </div>
+      </div>
+      {% endif %}
     </div>
 
-  </div>
-  {% endif %}
-</div>
-<br />
+{% else %}
 
+    <div class="post">
+        <article>
+            <h1>Hello {{ user.username }}</h1>
+            <form action="{% url 'logout' %}" method="POST" style="margin: auto; width: min-content;">
+                {% csrf_token %}
+                <h2><button type="submit">Logout</button></h2>
+            </form>
+        </article>
+    </div>
+    
+
+
+{% endif %}
 
 {% endblock %}

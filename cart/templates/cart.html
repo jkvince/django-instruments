@@ -8,7 +8,7 @@
 {% endblock %}
 {% block content %}
 
-<div class="post-list">
+<div class="post-list" style="width: 80%;">
 {% if not cart_items %}
     <div>
         <div class="text-center">
@@ -47,7 +47,8 @@
                     <tr>
                         <td>
                             <a href="{% url 'shop:product_detail' cart_item.product.category.slug cart_item.product.slug %}">
-                                <img src="{{ cart_item.product.image.url }}" alt="" class="float-left rounded custom_image">
+                                <img src="{{ cart_item.product.image.url }}" alt="" class="float-left rounded custom_image"
+                                    style="width: 50%;">
                             </a>
                         </td>
                         <td class="text-left">

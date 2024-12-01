@@ -10,7 +10,7 @@
 <div class="post">
 
     <article>
-        <h2><a href="">Create a New Post!</a></h2>
+        <h2><a href="{% url 'messageboard:post_new' %}">Create a New Post!</a></h2>
         {% for post in post_list %}
             <div class="post-entry">
                 <h2><a href="{{ post.get_absolute_url }}">{{ post.title }}</a> - {{ post.author }}</h2>

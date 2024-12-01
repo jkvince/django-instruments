@@ -11,19 +11,25 @@
 
 {% block content %}
     <div class="row my_prod_row_class">
-        <div class="mx-auto">
+        
+        
+        <div class="mx-auto post-list wirebox">
             <p>
                 <a href="{% url 'shop:all_products' %}">Home</a> | 
                 <a href="{{ product.category.get_absolute_url }}">{{ product.category.name }}</a> | 
                 {{ product.name }}
             </p>
         </div>
+
+
+
         <div class="container">
             <br>
             <div class="row">
                 <div class="col-12 col-sm-12 col-md-12 col-lg-6 text-center">
                     <div style="min-width:18rem;">
-                        <img src="{{ product.image.url }}" alt="{{ product.name }}">
+                        <img src="{{ product.image.url }}" alt="{{ product.name }}"
+                            style="width: 50%;">
                     </div>
                 </div>
                 <!--Product card -->
