@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+
 {% block metadescription %}
     {% if category %}
         {{ category.description|truncatewords:155 }}
@@ -7,6 +8,7 @@
         Welcome to the cushion store where you can buy comfy and awesome cushions.
     {% endif %}
 {% endblock %}
+
 {% block title %}
     {% if category %}
         {{ category.name }} - WaveNetwork
@@ -14,6 +16,7 @@
         Product List - WaveNetwork
     {% endif %}
 {% endblock %}
+
 {% block content %}
     <!--Breadcrumb navigation-->
     {% if category %}
@@ -23,6 +26,7 @@
             </div>
         </div>
     {% endif %}
+    
     <div class="mx-auto">
         {% if category %}
             <img class="my_image" src="{{category.image.url}}" alt="{{category.name}}">
@@ -37,37 +41,37 @@
     </div>
     <br>
     <div>
-
-    </div>
     {% endif %}
+    
     <div class="container">
         <div class="row mx-auto">
-            {% for product in prods %}
+            {% for product in products %}
                 <div class="my_bottom_margin col-9 col-lg-4 col-sm-12 col-md-4 mb-5">
                     <div class="card text-center" style="min-width:18rem;">
                         <a class="img" href="{{ product.get_absolute_url }}">
                             <img class="card-img-top my_image" src="{{ product.image.url }}" alt="{{ product.name }}">
                         </a>
-                        <div class="card-body bg-dark text-white ">
-                            <h4>{{product.name}}</h4>
-                            <p>€{{product.price}}</p>
+                        <div class="card-body bg-dark text-white">
+                            <h4>{{ product.name }}</h4>
+                            <p>€{{ product.price }}</p>
                         </div>
                     </div>
                 </div>
+            {% empty %}
+                <p>No products available in this category.</p>
             {% endfor %}
         </div>
+        
         <div class="mx-auto">
-            {% if prods.paginator.num_pages > 1 %}
-            <hr>
-            <div class="text-center">
-            {% for pg in prods.paginator.page_range %}
-            <a href="?page={{pg}}" class="btn btn-light
-            btn-sm {%
-            if products.number == pg %}active{% endif
-            %}">{{pg}}</a>
-            {% endfor %}
-            </div>
+            {% if products.paginator.num_pages > 1 %}
+                <hr>
+                <div class="text-center">
+                    {% for pg in products.paginator.page_range %}
+                        <a href="?page={{ pg }}" class="btn btn-light btn-sm {% if products.number == pg %}active{% endif %}">{{ pg }}</a>
+                    {% endfor %}
+                </div>
             {% endif %}
-        <br>
+            <br>
+        </div>
     </div>
 {% endblock %}

@@ -32,7 +32,7 @@ def prod_list(request, category_slug=None):
         products = paginator.page(page)
     except (EmptyPage,InvalidPage):
         products = paginator.page(paginator.num_pages)
-    return render(request, 'shop/product_list.html', {'category': category, 'products': products})
+    return render(request, 'shop/category.html', {'category': category, 'products': products})
     
 
 def product_detail(request, category_slug, product_slug):
