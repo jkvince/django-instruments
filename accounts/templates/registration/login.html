@@ -8,17 +8,10 @@
     Login - Perfect Cushion Store
 {% endblock %}
 {% block content %}
-    <div class="container">
-        <br>
-        <h1 class="my_title text-center">Login or Create a New Account</h1>
-        <br>
+    <div class="container create-form">
+        <h1 class="my_title text-center">Login</h1>
         <div class="row">
-            <div class="col-12 col-sm-12 col-md-12 col-lg-6 text-center my_custom_div">
-                <br>
-                <h2 class="my_title">New Customer?</h2>
-                <br>
-                <a href="{% url 'accounts:signup' %}" class="btn btn-secondary">Create New Account</a>
-            </div>
+            
             <div class="col-12 col-sm-12 col-md-12 col-lg-6 bg-light">
                 <div>
                     <br>
@@ -31,6 +24,12 @@
                     <br>
                 </div>
                 
+            </div>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-6 text-center my_custom_div">
+                <br>
+                <h2 class="my_title">New Customer?</h2>
+                <br>
+                <a href="{% url 'accounts:signup' %}" class="btn btn-secondary">Create New Account</a>
             </div>
         </div>
         <br>

@@ -7,12 +7,14 @@
     Cart - Perfect Cushion Store
 {% endblock %}
 {% block content %}
+
+<div class="post-list">
 {% if not cart_items %}
     <div>
         <div class="text-center">
             <br>
             <h1 class="text-center my_title">
-                Your shopping cart is empty
+                Your shopping cart is empty!
             </h1>
             <br>
             <p class="text-center">
@@ -146,4 +148,5 @@
     </div>
     <br>
 {% endif %}
+</div>
 {% endblock %}

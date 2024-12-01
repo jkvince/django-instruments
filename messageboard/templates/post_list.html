@@ -8,15 +8,15 @@
 <h1 class="wirebox" style="margin-top: 30px; text-align: center;">All Posts</h1>
 
 <div class="post">
-    <article>
 
+    <article>
+        <h2><a href="">Create a New Post!</a></h2>
         {% for post in post_list %}
             <div class="post-entry">
                 <h2><a href="{{ post.get_absolute_url }}">{{ post.title }}</a> - {{ post.author }}</h2>
                 <p>{{ post.date }}</p>
             </div>
         {% endfor %}
-
     </article>
 </div>
 

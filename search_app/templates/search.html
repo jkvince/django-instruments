@@ -14,13 +14,17 @@ Search - Wave Network
     <p class="text-center my_search_text">You have searched for: <b>"{{ query }}"</b></p>
 </div>
 <div class="container">
-    <div class="row mx-auto">
+    <div class="row mx-auto" 
+        style="display: flex; flex-wrap: wrap; justify-content: space-around;">
         {% for product in product_list %}
-        <div class="my_bottom_margin col-9 col-sm-12 col-md-4 col-md-12 col-lg-4">
-            <div class="card text-center" style="min-width: 18rem;">
-                <a href="{% url 'shop:product_detail' product.category.slug product.slug %}"><img class="card-img-top my_image" src="{{product.image.url}}"
-                        alt="{{product.name}}"></a>
-                <div class="card-body">
+        <div class="my_bottom_margin col-9 col-sm-12 col-md-4 col-md-12 col-lg-4"
+            style="width: 30%;">
+            <div class="card text-center" 
+                style="min-width: 18rem; border: solid #5b3b88 1px; margin-bottom: 10%;">
+                <a href="{% url 'shop:product_detail' product.category.slug product.slug %}">
+                    <img class="card-img-top my_image" src="{{product.image.url}}"
+                        style="width: 100%" alt="{{product.name}}"></a>
+                <div class="card-body" style="padding: 5%;">
                     <h4>{{product.name}}</h4>
                     <p>€{{product.price}}</p>
                 </div>

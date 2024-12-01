@@ -37,3 +37,7 @@ class ProfileEditView(UpdateView):
 class ProfilePageView(DetailView):
     model = Profile
     template_name = 'registration/user_profile.html'
+
+class LoginView(DetailView):
+    model = Profile
+    template_name = 'registration/login.html'

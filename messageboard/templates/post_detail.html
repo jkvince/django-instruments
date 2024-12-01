@@ -4,7 +4,7 @@
 {% block content %}
 <div class="post">
     <article class="post-entry">
-        <h1>{{ post.title }}</h1>
+        <h1><a href="{% url 'messageboard:post_list' %}">Go Back</a> - {{ post.title }}</h1>
         <p>{{ post.text | linebreaks }}</p>
 
         {% if post.author.pk == request.user.pk %}
