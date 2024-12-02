@@ -30,6 +30,7 @@
             </button>
             <p>Already have an account?</p>
             <a href="{% url 'accounts:login' %}">Login</a>
+            <p>Forgot your password? <a href="{% url 'password_reset' %}">Reset it here</a>.</p>
           </form>
         </div>
       </div>
@@ -45,6 +46,8 @@
                 {% csrf_token %}
                 <h2><button type="submit">Logout</button></h2>
                 <a href="{% url 'order:order_history' %}">View My Orders</a>
+                <p>Want to change password <a href="{% url 'password_reset' %}">Reset it here</a>.</p>
+
             </form>
         </article>
     </div>
