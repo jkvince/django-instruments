@@ -55,9 +55,17 @@ Use google extension save image as
 
 # Managers: 
     Collin
-    Username - Manager_Collin
-    Password - Management123
+    Username - collin
+    Password - collin
+
+    test email for cart = collin@gmail.com
 
     Vin
     Username - Manager_Vin
     Password - Management123
+
+# Hosting
+http://127.0.0.1:8080/
+
+# Python anywhere
+link: jkvince.pythonanywhere.com

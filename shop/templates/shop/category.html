@@ -19,17 +19,19 @@
 
 {% block content %}
     <!--Breadcrumb navigation-->
-    {% if category %}
+    <article>
+        {% if category %}
         <div class="row my_row_class">
             <div class="mx-auto">
                 <p><a href="{% url 'shop:all_products' %}">Our Product Collection</a> | {{category.name}}</p>
             </div>
         </div>
     {% endif %}
+    </article>
     
     <div class="mx-auto">
         {% if category %}
-            <img class="my_image" src="{{category.image.url}}" alt="{{category.name}}">
+            <img class="my_image" src="{{category.image.url}}" style="width: 80%; margin: auto; margin-bottom: 2em; margin-left: 2em;" alt="{{category.name}}">
         </div>
         <br>
         <div>

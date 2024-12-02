@@ -5,6 +5,7 @@ from django.contrib.auth.models import Group
 from django.urls import reverse_lazy
 from .forms import CustomUserCreationForm
 from .models import CustomUser, Profile
+from order.models import Order  
 
 class SignUpView(CreateView):
     model = CustomUser

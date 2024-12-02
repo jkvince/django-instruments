@@ -1,7 +1,5 @@
 {% extends "base.html" %}
 {% load static %}
-
-
 {% block metadescription %}
     {{ product.description|truncatewords:155 }}
 {% endblock %}
@@ -11,11 +9,11 @@
 {% block content %}
 
 <article class="post-list">
-
     <div>
-        <h1>Inspiring words here</h1>
+        <h1>Welcome To Wave-Network</h1>
     </div>
-    
+    <img src="{% static 'images/Hero_image.jpg' %}" style="width: 100%; margin: auto; margin-bottom: 2em;" alt="">
+
     <div>
         <h1>Start Playing Today!</h1>
         <p>Sign up on a free membership for benefits!</p>
@@ -27,49 +25,10 @@
     </div>
 
     <div>
-        <h1>Use code "ELECTRIC-BOOGALOO" to get 15% off!</h1>
+        <h1>Use code "IBANEZ" to get 35% off!</h1>
         <p>Lorem ipsum.</p>
     </div>
-
-    <div>
-        <h1>Box 5</h1>
-        <p>Lorem ipsum.</p>
-    </div>
-
-    <div>
-        <h1>Box 6</h1>
-        <p>Lorem ipsum.</p>
-    </div>
-    <div>
-        <h1>Box 5</h1>
-        <p>Lorem ipsum.</p>
-    </div>
-
-    <div>
-        <h1>Box 6</h1>
-        <p>Lorem ipsum.</p>
-    </div>
-    <div>
-        <h1>Box 5</h1>
-        <p>Lorem ipsum.</p>
-    </div>
-
-    <div>
-        <h1>Box 6</h1>
-        <p>Lorem ipsum.</p>
-    </div>
-    <div>
-        <h1>Box 5</h1>
-        <p>Lorem ipsum.</p>
-    </div>
-
-    <div>
-        <h1>Box 6</h1>
-        <p>Lorem ipsum.</p>
-    </div>
-
     
-
 </article>
 
 {% endblock %}

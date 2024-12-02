@@ -9,6 +9,11 @@
         <a href="{% url 'messageboard:post_list' %}"><li>Message Board</li></a>
         <a href="{% url 'cart:cart_detail' %}"><li>Basket</li></a>
         <a href="{% url 'accounts:signup' %}"><li>Account</li></a>
+        <a href="{% url 'order:order_history' %}"><li>Order History</li></a>
         <a href="{% url 'shop:about' %}"><li>About</li></a>
+        {% if user.is_authenticated and user.is_manager %}
+        <a href="{% url 'shop:add_product' %}"><li>Add Product</li></a>
+        {% endif %}
+
     </ul>
 </nav>

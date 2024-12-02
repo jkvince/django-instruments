@@ -1,5 +1,6 @@
 from django.contrib import admin
 from .models import Order, OrderItem
+
 class OrderItemAdmin(admin.TabularInline):
     model = OrderItem
     fieldsets = [

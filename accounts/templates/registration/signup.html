@@ -44,6 +44,7 @@
             <form action="{% url 'logout' %}" method="POST" style="margin: auto; width: min-content;">
                 {% csrf_token %}
                 <h2><button type="submit">Logout</button></h2>
+                <a href="{% url 'order:order_history' %}">View My Orders</a>
             </form>
         </article>
     </div>

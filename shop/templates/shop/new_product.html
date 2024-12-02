@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Add Product - Perfect Cushion Store{% endblock %}
+
+{% block content %}
+    <h1 class="text-center">Add New Product</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Add Product</button>
+    </form>
+{% endblock %}
