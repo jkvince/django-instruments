@@ -1,3 +1,6 @@
+/*The making of this code was helped
+  with an external referece(see README) */
+
 const parallaxContainer = document.querySelector('body');
 
 parallaxContainer.style.backgroundImage = 'url("/static/images/background.png")';

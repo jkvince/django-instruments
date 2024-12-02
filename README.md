@@ -53,19 +53,22 @@ Set image size to 250 x 250 px for products
 Use google extension save image as
 
 
-# Managers: 
-    Collin
-    Username - collin
-    Password - collin
-
-    test email for cart = collin@gmail.com
-
-    Vin
-    Username - Manager_Vin
-    Password - Management123
+# Managers:
+```
+Collin
+Username - collin
+Password - collin
+test email for cart = collin@gmail.com
+Vin
+Username - Manager_Vin
+Password - Management123
+```
 
 # Hosting
 http://127.0.0.1:8080/
+
+# References
+[Javascript Reference](https://dev.to/ibrahima92/make-a-parallax-effect-with-10-lines-of-javascript-3hia)
 
 # Python anywhere
 link: jkvince.pythonanywhere.com
